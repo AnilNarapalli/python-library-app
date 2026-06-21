@@ -38,7 +38,7 @@ services:
       - mynetwork
 
   frontend:
-    image: anilkumarnaraplli/pyapp:frontend-image
+    image: anilkumarnaraplli/pyapp:frontend
     deploy:
       replicas: 1
     ports:
