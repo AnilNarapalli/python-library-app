@@ -1,6 +1,6 @@
 services:
   db:
-    image: anilkumarnaraplli/pyapp:db-image
+    image: anilkumarnarapalli/pyapp:db-image
     deploy:
       replicas: 1
     ports:
@@ -9,14 +9,14 @@ services:
       - mynetwork
 
   auth_service:
-    image: anilkumarnaraplli/pyapp:auth-image
+    image: anilkumarnarapalli/pyapp:auth-image
     deploy:
       replicas: 1
     networks:
       - mynetwork
 
   book_service:
-    image: anilkumarnaraplli/pyapp:book-image
+    image: anilkumarnarapalli/pyapp:book-image
     deploy:
       replicas: 1
     depends_on:
@@ -25,14 +25,14 @@ services:
       - mynetwork
 
   borrow_service:
-    image: anilkumarnaraplli/pyapp:borrow-image
+    image: anilkumarnarapalli/pyapp:borrow-image
     deploy:
       replicas: 1
     networks:
       - mynetwork
 
   frontend:
-    image: anilkumarnaraplli/pyapp:frontend
+    image: anilkumarnarapalli/pyapp:frontend
     deploy:
       replicas: 1
     ports:
