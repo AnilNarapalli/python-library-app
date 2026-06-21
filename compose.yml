@@ -1,24 +1,24 @@
 services:
   db:
-    image: anilkumarnarapalli/pyapp:db-image
+    image: anilkumarnaraplli/pyapp:db-image
     deploy:
       replicas: 1
     ports:
       - "3306:3306"
     networks:
       - mynetwork
- 
+
   auth_service:
-    image: anilkumarnarapalli/pyapp:auth-image
+    image: anilkumarnaraplli/pyapp:auth-image
     deploy:
       replicas: 1
     ports:
       - "5001:5001"
     networks:
       - mynetwork
- 
+
   book_service:
-    image: anilkumarnarapalli/pyapp:book_image
+    image: anilkumarnaraplli/pyapp:book-image
     deploy:
       replicas: 1
     ports:
@@ -27,18 +27,18 @@ services:
       - db
     networks:
       - mynetwork
- 
+
   borrow_service:
-    image: anilkumarnarapalli/pyapp:borrow_image
+    image: anilkumarnaraplli/pyapp:borrow-image
     deploy:
       replicas: 1
     ports:
       - "5003:5003"
     networks:
       - mynetwork
- 
+
   frontend:
-    image: anilkumarnarapalli/pyapp:frontend
+    image: anilkumarnaraplli/pyapp:frontend-image
     deploy:
       replicas: 1
     ports:
@@ -49,7 +49,7 @@ services:
       - borrow_service
     networks:
       - mynetwork
- 
+
 networks:
   mynetwork:
     driver: overlay
