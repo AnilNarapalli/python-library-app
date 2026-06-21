@@ -12,8 +12,6 @@ services:
     image: anilkumarnaraplli/pyapp:auth-image
     deploy:
       replicas: 1
-    ports:
-      - "5001:5001"
     networks:
       - mynetwork
 
@@ -21,8 +19,6 @@ services:
     image: anilkumarnaraplli/pyapp:book-image
     deploy:
       replicas: 1
-    ports:
-      - "5002:5002"
     depends_on:
       - db
     networks:
@@ -32,8 +28,6 @@ services:
     image: anilkumarnaraplli/pyapp:borrow-image
     deploy:
       replicas: 1
-    ports:
-      - "5003:5003"
     networks:
       - mynetwork
 
