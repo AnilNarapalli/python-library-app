@@ -54,5 +54,4 @@ networks:
   mynetwork:
     driver: overlay
 
-    driver: overlay
   
